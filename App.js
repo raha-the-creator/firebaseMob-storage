@@ -56,7 +56,7 @@ export default function App() {
 
   const Upload = async(file_uri)=>{
     const file = await fetch(file_uri);
-    const blob = file.blob();
+    const blob = await file.blob();
     //file blob
     const storage = getStorage();
     const storageRef = ref(storage, 'mobile.jpg');
